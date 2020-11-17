@@ -13,7 +13,7 @@
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    z-index: 2;
+    z-index: 1;
 }
 
 /* .scroll-texts img {
@@ -31,6 +31,7 @@
     height: 100%;
     opacity: 0.9;
     top: 50%;
+    z-index: 1;
     /* outline: yellowgreen dashed; */
 }
 
@@ -51,7 +52,7 @@
     border: 2px solid #282828;
     /*OPTIONAL: makes the text slightly see-through so that the figure is somewhat visible underneath*/
     opacity: 0.90;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 #last-step {

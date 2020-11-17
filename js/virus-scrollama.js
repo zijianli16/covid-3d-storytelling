@@ -25,7 +25,7 @@ scrollamaVirus
                 $("#dna").css("visibility", "hidden");
             }
             else if (newIndex == 0 && direction == 'up') {
-               
+
             }
             else if (newIndex == 1 && direction == "down") {
                 $("#virus-model-viewer").attr("camera-orbit", "-200.31deg 60.24deg 1.5m");
@@ -37,7 +37,7 @@ scrollamaVirus
 
             }
             else if (newIndex == 1 && direction == "up") {
-                
+
             }
             else if (newIndex == 2 && direction == "down") {
                 $("#virus-model-viewer").attr("camera-orbit", "-200.31deg 30.24deg 1.5m");
@@ -64,7 +64,7 @@ scrollamaVirus
                 $("#dna").css("visibility", "hidden");
             }
             else if (newIndex == 3 && direction == "up") {
-                //$("#virus-model-viewer").attr("camera-orbit", "43.2deg 130deg 0.1966m");
+
             }
             else if (newIndex == 4 && direction == "down") {
                 $("#virus-model-viewer").attr("camera-orbit", "-235.31deg 70.24deg 0.5m");
@@ -75,7 +75,13 @@ scrollamaVirus
                 $("#dna").css("visibility", "visible");
             }
             else if (newIndex == 4 && direction == "up") {
-                //$("#virus-model-viewer").attr("camera-orbit", "43.2deg 130deg 0.1966m");
+
+            }
+            else if (newIndex == 5 && direction == "down") {
+
+            }
+            else if (newIndex == 5 && direction == "up") {
+
             }
         }
 
@@ -122,7 +128,7 @@ scrollamaVirus
                 $("#yellow-p").css("visibility", "hidden");
                 $("#purple-p").css("visibility", "hidden");
                 $("#dna").css("visibility", "hidden");
-               
+
             }
             else if (newIndex == 2 && direction == "down") {
                 //$("#virus-model-viewer").attr("camera-orbit", "43.2deg 130deg 0.1966m");
@@ -160,6 +166,12 @@ scrollamaVirus
                 $("#purple-p").css("visibility", "visible");
                 $("#dna").css("visibility", "hidden");
             }
+            else if (newIndex == 5 && direction == "down") {
+
+            }
+            else if (newIndex == 5 && direction == "up") {
+
+            }
         }
 
         changeCameraOrbit01_02();
@@ -167,7 +179,7 @@ scrollamaVirus
         console.log("Exit");
         console.log(response.index);
         console.log(response.direction);
-    })
+    });
 
 // setup resize event
 window.addEventListener("resize", scrollamaVirus.resize);

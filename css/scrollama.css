@@ -1,4 +1,4 @@
-.scrollTexts {
+.scroll-texts {
     /* 'position:relative' allows the article section to be positioned in a custom way */
     position: relative;
     padding: 0 1rem;
@@ -13,10 +13,10 @@
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    z-index: 1;
+    z-index: 2;
 }
 
-/* .scrollTexts img {
+/* .scroll-texts img {
     display: block;
     max-width: 70%;
     max-height: 300px;
@@ -31,15 +31,10 @@
     height: 100%;
     opacity: 0.9;
     top: 50%;
-    z-index: 1;
     /* outline: yellowgreen dashed; */
 }
 
-#last-step {
-    height: 100%;
-    margin-bottom: 0px;
-    z-index: 2;
-}
+
 
 .step p {
     /* 'position relative' allows the steps to positioned in a custom way*/
@@ -57,6 +52,11 @@
     /*OPTIONAL: makes the text slightly see-through so that the figure is somewhat visible underneath*/
     opacity: 0.90;
     font-weight: bold;
+}
+
+#last-step {
+    height: 100%;
+    margin-bottom: 0px;
 }
 
 /* ========== media-query ============= */

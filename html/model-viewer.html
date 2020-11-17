@@ -1,126 +1,188 @@
-<title>新冠回溯</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html>
 
-<!-- Import model-viewer -->
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-<!-- Import srollama scripts -->
-<script src="https://unpkg.com/scrollama"></script>
-<!-- Import JQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<head>
+    <title>新冠回溯</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<link rel="stylesheet" href="/css/scrollama.css">
-<link rel="stylesheet" href="/css/model-viewer.css">
+    <!-- Import model-viewer -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <!-- Import srollama scripts -->
+    <script src="https://unpkg.com/scrollama"></script>
+    <!-- Import JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <link rel="stylesheet" href="/css/scrollama.css">
+    <link rel="stylesheet" href="/css/model-viewer.css">
+</head>
 
-<div class="dummy-text">
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<body>
+    <div class="dummy-texts">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
 
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-</div>
-
-<div id="virus-model-container">
-    <model-viewer id="virus-model-viewer" ar src="/models/virus-model.glb" alt="新冠病毒3D模型"
-        ios-src="/models/virus-model.usdz" exposure="0.8" shadow-intensity="1.7" shadow-softness="1"
-        animation-name="Action" camera-orbit="-344.5deg 76.65deg 3m" field-of-view="90deg" min-field-of-view="50deg"
-        max-field-of-view="90deg" min-camera-orbit="auto auto 0m" max-camera-orbit="auto auto 3m" autoplay
-        quick-look-browsers="safari chrome">
-
-        <button slot="ar-button" id="ar-button">
-            AR功能
-        </button>
-
-        <button id="tuchu" class="Hotspot" slot="hotspot-1"
-            data-position="0.5456869988675925m 1.1083549959338548m 0.36137029874144055m"
-            data-normal="0.09884958484158678m 0.9437516755063027m -0.3155337296640292m"
-            data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">棘突</div>
-        </button>
-
-        <button id="yellow-p" class="Hotspot" slot="hotspot-2"
-            data-position="0.31439512768158256m 0.5384131658508594m -0.5845267529524666m"
-            data-normal="0.2647913572096705m -0.34541617757574344m -0.9003183889136238m"
-            data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">E蛋白质<br>（E Protein）<br>标注为黄色</div>
-        </button>
-
-        <button id="green-p" class="Hotspot" slot="hotspot-3"
-            data-position="-0.000482181381573233m 0.8708903740428329m -0.2540032821447735m"
-            data-normal="0.08843240135165509m 0.9478377897621274m -0.3062404850603938m"
-            data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">血凝素酯酶二聚体<br>（hemagglutinin-esterase dimer)<br>标注为绿色</div>
-        </button>
-
-        <button id="purple-p" class="Hotspot" slot="hotspot-4"
-            data-position="-0.10311313339096861m 0.49607635476381834m -0.7069866683530017m"
-            data-normal="0.5854998957600352m 0.5642634700308164m -0.5820623750542289m"
-            data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">膜糖蛋白<br>(M Protein)<br>（标注为紫色）</div>
-        </button>
-
-        <button id="dna" class="Hotspot" slot="hotspot-5"
-            data-position="-0.19690285339330726m -0.040792330714902736m 0.20366757345782066m"
-            data-normal="0.7810395660127288m -0.007086720506193607m -0.6244413300824307m"
-            data-visibility-attribute="visible">
-            <div class="HotspotAnnotation">RNA遗传物质<br>（标注为红色)</div>
-        </button>
-
-    </model-viewer>
-
-    <figcaption class="figCaption">新冠病毒模型来源：https://sketchfab.com/talesrt<br>病毒信息来源：http://www.lascn.com/Item/82421.aspx
-    </figcaption>
-
-</div>
-
-<div class="scrollTexts">
-    <div class="step" data-step="a">
         <p>
-            冠状病毒属的病毒是具有外套膜（envelope）包裹的RNA病毒，其直径约100-160nm，遗传物质在所有RNA病毒中最大。
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
         </p>
     </div>
 
-    <div class="step" data-step="b">
-        <p>
-            <strong>棘突糖蛋白：</strong><br>棘突糖蛋白（S, SpikeProtein,是受体结合位点、溶细胞作用和主要抗原位点）。
-        </p>
+    <div id="virus-model-container">
+        <model-viewer id="virus-model-viewer" ar src="/models/virus-model.glb" alt="新冠病毒3D模型"
+            ios-src="/models/virus-model.usdz" exposure="0.8" shadow-intensity="1.7" shadow-softness="1"
+            animation-name="Action" camera-orbit="-344.5deg 76.65deg 3m" field-of-view="90deg" min-field-of-view="50deg"
+            max-field-of-view="90deg" min-camera-orbit="auto auto 0m" max-camera-orbit="auto auto 3m" autoplay
+            quick-look-browsers="safari chrome">
+
+            <button slot="ar-button" id="ar-button">
+                AR功能
+            </button>
+
+            <button id="tuchu" class="Hotspot" slot="hotspot-1"
+                data-position="0.5456869988675925m 1.1083549959338548m 0.36137029874144055m"
+                data-normal="0.09884958484158678m 0.9437516755063027m -0.3155337296640292m"
+                data-visibility-attribute="visible">
+                <div class="HotspotAnnotation">棘突</div>
+            </button>
+
+            <button id="yellow-p" class="Hotspot" slot="hotspot-2"
+                data-position="0.31439512768158256m 0.5384131658508594m -0.5845267529524666m"
+                data-normal="0.2647913572096705m -0.34541617757574344m -0.9003183889136238m"
+                data-visibility-attribute="visible">
+                <div class="HotspotAnnotation">E蛋白质<br>（E Protein）<br>标注为黄色</div>
+            </button>
+
+            <button id="green-p" class="Hotspot" slot="hotspot-3"
+                data-position="-0.000482181381573233m 0.8708903740428329m -0.2540032821447735m"
+                data-normal="0.08843240135165509m 0.9478377897621274m -0.3062404850603938m"
+                data-visibility-attribute="visible">
+                <div class="HotspotAnnotation">血凝素酯酶二聚体<br>（hemagglutinin-esterase dimer)<br>标注为绿色</div>
+            </button>
+
+            <button id="purple-p" class="Hotspot" slot="hotspot-4"
+                data-position="-0.10311313339096861m 0.49607635476381834m -0.7069866683530017m"
+                data-normal="0.5854998957600352m 0.5642634700308164m -0.5820623750542289m"
+                data-visibility-attribute="visible">
+                <div class="HotspotAnnotation">膜糖蛋白<br>(M Protein)<br>（标注为紫色）</div>
+            </button>
+
+            <button id="dna" class="Hotspot" slot="hotspot-5"
+                data-position="-0.19690285339330726m -0.040792330714902736m 0.20366757345782066m"
+                data-normal="0.7810395660127288m -0.007086720506193607m -0.6244413300824307m"
+                data-visibility-attribute="visible">
+                <div class="HotspotAnnotation">RNA遗传物质<br>（标注为红色)</div>
+            </button>
+
+        </model-viewer>
+
+        <figcaption class="figCaption">
+            新冠病毒模型来源：https://sketchfab.com/talesrt<br>病毒信息来源：http://www.lascn.com/Item/82421.aspx
+        </figcaption>
+
     </div>
 
-    <div class="step" data-step="c">
-        <p>
-            <strong>小包膜糖蛋白：</strong><br>小包膜糖蛋白（E, EnvelopeProtein，较小，与胞膜结合的蛋白）。在病毒进入细胞后会进行大量复制。
-        </p>
+    <div class="scroll-texts">
+        <div class="step" data-step="a">
+            <p>
+                冠状病毒属的病毒是具有外套膜（envelope）包裹的RNA病毒，其直径约100-160nm，遗传物质在所有RNA病毒中最大。
+            </p>
+        </div>
+
+        <div class="step" data-step="b">
+            <p>
+                <strong>棘突糖蛋白：</strong><br>棘突糖蛋白（S, SpikeProtein,是受体结合位点、溶细胞作用和主要抗原位点）。
+            </p>
+        </div>
+
+        <div class="step" data-step="c">
+            <p>
+                <strong>小包膜糖蛋白：</strong><br>小包膜糖蛋白（E, EnvelopeProtein，较小，与胞膜结合的蛋白）。在病毒进入细胞后会进行大量复制。
+            </p>
+        </div>
+
+        <div class="step" data-step="d">
+            <p>
+                <strong>血凝素糖蛋白：</strong><br>少数种类还有血凝素糖蛋白（HE蛋白，Haemaglutinin－esterase）。它与病毒中酶的活性相关。
+            </p>
+        </div>
+
+        <div class="step" data-step="e">
+            <p>
+                <strong>膜糖蛋白：</strong><br>膜糖蛋白（M，MembraneProtein，负责营养物质的跨膜运输、新生病毒出芽释放与病毒外包膜的形成）。
+            </p>
+        </div>
+
+        <div class="step" id="last-step" data-step="f">
+            <p>
+                <strong>遗传物质RNA:</strong><br>与我们人类的遗传物质双链 DNA 不同，冠状病毒是一类单链 RNA 病毒。比起稳定的双链 DNA 结构，单链的遗传物质使得冠状病毒具有更强的变异性。
+            </p>
+        </div>
     </div>
 
-    <div class="step" data-step="d">
+    <div class="dummy-texts">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+
         <p>
-            <strong>血凝素糖蛋白：</strong><br>少数种类还有血凝素糖蛋白（HE蛋白，Haemaglutinin－esterase）。它与病毒中酶的活性相关。
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
         </p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
     </div>
 
-    <div class="step" data-step="e">
-        <p>
-            <strong>膜糖蛋白：</strong><br>膜糖蛋白（M，MembraneProtein，负责营养物质的跨膜运输、新生病毒出芽释放与病毒外包膜的形成）。
-        </p>
-    </div>
+    <script src="/js/virus-scrollama.js"></script>
+</body>
 
-    <div class="step" id="last-step" data-step="f">
-        <p>
-            <strong>冠状病毒遗传物质RNA</strong><br>与我们人类的遗传物质双链 DNA 不同，冠状病毒是一类单链 RNA 病毒。比起稳定的双链 DNA 结构，单链的遗传物质使得冠状病毒具有更强的变异性。
-        </p>
-    </div>
-</div>
-
-<div class="dummy-text">
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-</div>
-
-<script src="/js/virus-scrollama.js"></script>
+</html>

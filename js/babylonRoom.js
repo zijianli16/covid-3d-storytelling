@@ -1,5 +1,5 @@
 //import type auto completion file
-///<reference path='babylon.d.ts' />
+/////<reference path='babylon.d.ts' />
 
 function initBabylonScene() {
 
@@ -60,10 +60,10 @@ function blenderCameraAnimation(scene) {
     //creating a skybox
     scene.clearColor = new BABYLON.Color3.FromHexString('#808080');
 
-    // This creates and positions a free camera (non-mesh) requried, and position does not matter 
+    //This creates and positions a free camera (non-mesh) requried, and position does not matter 
     var camera_not_in_use = new BABYLON.FreeCamera("camera_not_in_use", new BABYLON.Vector3(0, 100, 0), scene);
 
-    // new BABYLON.SceneLoader.ImportMesh('', 'models/', 'GreatWallWholeView.gltf', scene, () => {
+    // new BABYLON.SceneLoader.ImportMesh('', 'models/', 'covidRoom.gltf', scene, () => {
     //     //scene.createDefaultCameraOrLight(true, true, true)
     //     console.log("scene =" + scene);
 
@@ -85,7 +85,7 @@ function blenderCameraAnimation(scene) {
     //     }, 1000 / 24);
     // })
 
-    BABYLON.SceneLoader.ImportMeshAsync('https://zijianli16.github.io/covid-3d-storytelling/models/','covidRoom.gltf', scene).then(() => {
+    new BABYLON.SceneLoader.ImportMeshAsync('','models/','covidRoom.gltf', scene).then(() => {
         //scene.createDefaultCameraOrLight(true, true, true)
         //console.log("scene =" + scene);
 
@@ -106,7 +106,7 @@ function blenderCameraAnimation(scene) {
             cameraAnimation.goToFrame(value);
         }, 1000 / 24);
     });
-}
+ }
 
 //Debug: show Scene Explore and Inspector
 function debug(scene) {

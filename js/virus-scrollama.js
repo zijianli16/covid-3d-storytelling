@@ -4,7 +4,7 @@ const scrollamaVirus = scrollama();
 scrollamaVirus
     .setup({
         step: ".step",
-        debug: true,
+        debug: false,
         offset: 0
     })
 

@@ -17,20 +17,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
+    <!-- Import Babylon.js -->
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+    <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
 
     <!-- Import CSS files -->
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/scrollama.css">
     <link rel="stylesheet" href="/css/model-viewer.css">
     <link rel="stylesheet" href="/css/map-scrollmagic.css">
+    <link rel="stylesheet" href="/css/babylon.css">
 </head>
 
 <body>
     <div id="intro">
         <h1 style="text-align: center;">回溯新冠</h1>
         <h2 style="text-align: center;">3D/AR滑动新闻叙事</h2>
-        <h4>李子健</h4>
-        <h4>联系方式：<br> 微信: zijianli16<br>zijianli16@gmail.com</h4>
+        <h4>作者：李子健</h4>
+        <h4>联系方式：<br> 微信: zijianli16<br>邮箱：zijianli16@gmail.com</h4>
+        <p>
+            备注：这个项目意在展示3D/AR滑动叙事。里面涉及的3D模型、图片、文字、数据仅供参考。
+        </p>
     </div>
 
     <div>
@@ -205,20 +213,103 @@
     </div>
 
     <div>
-        
-        <h2>
+        <h2 style="margin-top: 30px;">
             3D参观雷神山病房
         </h2>
-
-        <p>
-            Lorem Ipsum，也称乱数假文或者哑元文本， 是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem
-            Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem
-            Ipsum段落的纸张，从而广泛普及了它的使用。最近，计算机桌面出版软件”Aldus PageMaker”也通过同样的方式使Lorem Ipsum落入大众的视野。
-        </p>
     </div>
 
+    <div id="babylon-content-container">
+        <div id="babylon-video-spacer"></div>
+        <div id="babylon-container">
+            <div id="loading-screen">
+                <img src='/images/loadingScreen.gif' alt="loading screen">
+            </div>
+            <canvas id="canvas" touch-action="auto"></canvas>
+            <figcaption class="figCaption">3D模型下载来源:Sketchfab.com </figcaption>
+        </div>
+
+
+        <!-- =================BABYLON SCENE 01 STARTS BELOW================= -->
+
+
+
+        <div id="babylon-text-container">
+            <div class="spacer" id="babylon-spacer0001"></div>
+            <div id="babylon-trigger1"></div>
+            <div id="babylon-pin1">
+                <p class="textbox" id="babylon-overlayText01">
+                    现在我们所看到的就是一个典型的新冠病房的布局。向下滑动以观察和了解病房中的医疗设备及其用途。</p>
+            </div>
+
+            <div class="spacer" id="babylon-spacer0102"></div>
+            <div id="babylon-trigger2"></div>
+            <div id="babylon-pin2">
+                <p class="textbox" id="babylon-overlayText02">
+                    这是一个移动X光扫描仪，可以随时监测新冠患者的肺部感染情况，方便医生追踪患者的病情。
+                </p>
+            </div>
+
+            <div class="spacer" id="babylon-spacer0203"></div>
+            <div id="babylon-trigger3"></div>
+            <div id="babylon-pin3">
+                <p class="textbox" id="babylon-overlayText03">
+                    病床上方的监视器实时显示病人的心跳，血压，血氧数据，一旦出现异常，医务人员可实时对病人进行相应的救治。
+                </p>
+            </div>
+
+            <div class="spacer" id="babylon-spacer0304"></div>
+            <div id="babylon-trigger4"></div>
+            <div id="babylon-pin4">
+                <p class="textbox" id="babylon-overlayText04">
+                    病床的左侧配备有先进的营养液注射器，可将输液的精确度控制在毫克范围内。
+                </p>
+            </div>
+
+            <div class="spacer" id="babylon-spacer0405"></div>
+            <div id="babylon-trigger5"></div>
+            <div id="babylon-pin5">
+                <p class="textbox" id="babylon-overlayText05">
+                    病床的右侧是静脉注射装置，也就是俗称的打点滴。
+                </p>
+            </div>
+
+            <div class="spacer" id="babylon-spacer0506"></div>
+            <div id="babylon-trigger6"></div>
+            <div id="babylon-pin6">
+                <p class="textbox" id="babylon-overlayText06">
+                    一间病房安排有两张病床，配备有相同的医疗设备。
+                </p>
+            </div>
+
+            <div class="spacer" id="babylon-spacer0607"></div>
+            <div id="babylon-trigger7"></div>
+            <div id="babylon-pin7">
+                <p class="textbox" id="babylon-overlayText07">
+                    病房里还配备有辅助医疗工具，方便不方便行走的病人活动。
+                </p>
+            </div>
+
+            <div class="spacer" id="babylon-spacer0708"></div>
+            <div id="babylon-trigger8"></div>
+            <div id="babylon-pin8">
+                <p class="textbox" id="babylon-overlayText08">
+                    病房中还安装有电脑，可以让医生实时联网与疫情中心同步数据。
+                </p>
+            </div>
+
+        </div>
+
+        
+    </div>
+
+    <div>
+        <h1>完</h1>
+    </div>
+    
+    <!-- Import javascripts  -->
     <script src="/js/virus-scrollama.js"></script>
     <script src="/js/map-scrollmagic.js"></script>
+    <script src="/js/babylon.js"></script>
 </body>
 
 </html>

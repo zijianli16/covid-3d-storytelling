@@ -18,10 +18,10 @@ function initMapScrollmagicScene() {
         var bgVideo = $("#bg-video");
         var windowWidth = $(window).width();
         if (windowWidth < 1200) {
-            bgVideo.attr("src", "/videos/hosLocations_Mobile.mp4");
+            bgVideo.attr("src", "https://zijianli16.github.io/covid-3d-storytelling/videos/hosLocations_Mobile.mp4");
         }
         else {
-            bgVideo.attr("src", "/videos/hosLocations_Desktop.mp4");
+            bgVideo.attr("src", "https://zijianli16.github.io/covid-3d-storytelling/videos/hosLocations_Desktop.mp4");
         }
     }
     switchBGVideo();

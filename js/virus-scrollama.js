@@ -87,9 +87,9 @@ scrollamaVirus
 
         changeCameraOrbit01_01();
 
-        console.log("Entered");
-        console.log(response.index);
-        console.log(response.direction);
+        //console.log("Entered");
+        //console.log(response.index);
+        //console.log(response.direction);
 
         // var newOrbit = document.getElementsByTagName('model-viewer')[0].getAttribute('camera-orbit');
         // console.log('newOrbit = ' + newOrbit);
@@ -176,9 +176,9 @@ scrollamaVirus
 
         changeCameraOrbit01_02();
 
-        console.log("Exit");
-        console.log(response.index);
-        console.log(response.direction);
+        //console.log("Exit");
+        //console.log(response.index);
+        //console.log(response.direction);
     });
 
 // setup resize event

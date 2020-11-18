@@ -85,9 +85,9 @@ function blenderCameraAnimation(scene) {
     //     }, 1000 / 24);
     // })
 
-    BABYLON.SceneLoader.ImportMeshAsync('https://', 'zijianli16.github.io/covid-3d-storytelling/models/', 'covidRoom.gltf', scene).then(() => {
+    BABYLON.SceneLoader.ImportMeshAsync('https://zijianli16.github.io/covid-3d-storytelling/models/', 'covidRoom.gltf', scene).then(() => {
         //scene.createDefaultCameraOrLight(true, true, true)
-        console.log("scene =" + scene);
+        //console.log("scene =" + scene);
 
         let camera_active = scene.getCameraByName("blenderCamera")
         scene.activeCamera = camera_active
@@ -181,7 +181,7 @@ setInterval(() => {
     targetVideoTime += (midVideoTime - targetVideoTime) * acceleration;
     //targetVideoTime = targetVideoTime + (midVideoTime - targetVideoTime)* acceleration
     value = targetVideoTime;
-    console.log("value = " + value);
+    //console.log("value = " + value);
     //console.log("video current time =" + targetVideoTime);
 }, 1000 / videoFrameRate);
 //======================Video Section ========================

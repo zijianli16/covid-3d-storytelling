@@ -92,7 +92,7 @@ function initMapScrollmagicScene() {
         //targetVideoTime = targetVideoTime + (midVideoTime - targetVideoTime)* acceleration
         bgVideo.currentTime = targetVideoTime;
 
-        console.log("video current time =" + targetVideoTime);
+        //console.log("video current time =" + targetVideoTime);
 
         setVidPlaybackSpeed();
 

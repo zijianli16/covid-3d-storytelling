@@ -12,9 +12,17 @@
     <script src="https://unpkg.com/scrollama"></script>
     <!-- Import JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Import Scroll Magic  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
 
+    <!-- Import CSS files -->
+    <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/scrollama.css">
     <link rel="stylesheet" href="/css/model-viewer.css">
+    <link rel="stylesheet" href="/css/map-scrollmagic.css">
 </head>
 
 <body>
@@ -140,7 +148,77 @@
         </p>
     </div>
 
+    <div id="map-container">
+        <div id="video-spacer"></div>
+        <div id="video-container">
+
+            <video id="bg-video" playsinline autoplay muted>
+            </video>
+            <figcaption class="figCaption">地理信息来源：Google Earth Studio</figcaption>
+
+        </div>
+
+        <div id="text-container">
+            <div class="spacer" id="spacer0001"></div>
+            <div id="trigger1"></div>
+            <div id="pin1">
+                <p class="textbox" id="overlayText01">
+                    疫情突发，迅速蔓延。武汉市决定参照北京“小汤山非典医院”模式，在蔡甸知音湖畔修建一座容纳1000张床位的火神山医院。两天后，又决定在30公里外的江夏黄家湖畔，再建一座雷神山医院。
+                </p>
+            </div>
+
+            <div class="spacer" id="spacer0102"></div>
+            <div id="trigger2"></div>
+            <div id="pin2">
+                <p class="textbox" id="overlayText02">
+                    此时的武汉，离汉通道关闭，地铁公交停运，全面进入战时状态。全市仅有两家传染病医院，床位不足900张，大量病人“求治无门”。有患者望眼欲穿，甚至有的直至病逝都没能等到床位。
+                </p>
+            </div>
+
+            <div class="spacer" id="spacer0203"></div>
+            <div id="trigger3"></div>
+            <div id="pin3">
+                <p class="textbox" id="overlayText03">
+                    与时间赛跑，与死神竞速。一张床位，就能挽救一个生命。
+                    <br>
+                    一声令下。一场事关生死的救援战全面打响!
+                </p>
+            </div>
+
+            <div class="spacer" id="spacer0304"></div>
+            <div id="trigger4"></div>
+            <div id="pin4">
+                <p class="textbox" id="overlayText04">
+                    火神山医院是参照2003年抗击非典期间“北京小汤山医院”模式，建设的一座专门医院，集中收治新型冠状病毒肺炎患者。医院总建筑面积3.39万平方米，编设床位1000张，开设重症监护病区、重症病区、普通病区。
+                </p>
+            </div>
+
+            <div class="spacer" id="spacer0405"></div>
+            <div id="trigger5"></div>
+            <div id="pin5">
+                <p class="textbox" id="overlayText05">
+                    武汉雷神山医院位于江夏区强军路，全院共设床位1600张，分别为2个重症医学科病区、3个亚重症病区及27个普通病区，除重症病区外，病房均为2人间。
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+        
+        <h2>
+            3D参观雷神山病房
+        </h2>
+
+        <p>
+            Lorem Ipsum，也称乱数假文或者哑元文本， 是印刷及排版领域所常用的虚拟文字。由于曾经一台匿名的打印机刻意打乱了一盒印刷字体从而造出一本字体样品书，Lorem
+            Ipsum从西元15世纪起就被作为此领域的标准文本使用。它不仅延续了五个世纪，还通过了电子排版的挑战，其雏形却依然保存至今。在1960年代，”Leatraset”公司发布了印刷着Lorem
+            Ipsum段落的纸张，从而广泛普及了它的使用。最近，计算机桌面出版软件”Aldus PageMaker”也通过同样的方式使Lorem Ipsum落入大众的视野。
+        </p>
+    </div>
+
     <script src="/js/virus-scrollama.js"></script>
+    <script src="/js/map-scrollmagic.js"></script>
 </body>
 
 </html>

@@ -85,7 +85,7 @@ function blenderCameraAnimation(scene) {
     //     }, 1000 / 24);
     // })
 
-    BABYLON.SceneLoader.ImportMeshAsync('https://zijianli16.github.io/covid-3d-storytelling/models/','covidRoom.gltf', scene).then(() => {
+    BABYLON.SceneLoader.ImportMeshAsync('https://zijianli16.github.io/covid-3d-storytelling/models/covidRoom.gltf', scene).then(() => {
         //scene.createDefaultCameraOrLight(true, true, true)
         //console.log("scene =" + scene);
 

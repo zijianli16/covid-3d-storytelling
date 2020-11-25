@@ -50,7 +50,7 @@ function initMapScrollmagicScene() {
 
     //========================Input Your Customized Value Below =====================
 
-    let videoDuration = 29;
+    let videoDuration = 30;
     //how long is the video? i.e 14 means that video is 14 seconds long. 
     let videoFrameRate = 30;
     //what is the video frame rate? i.e: 25fps/30fps

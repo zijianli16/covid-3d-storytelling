@@ -52,7 +52,7 @@ function initMapScrollmagicScene() {
 
     let videoDuration = 30;
     //how long is the video? i.e 14 means that video is 14 seconds long. 
-    let videoFrameRate = 30;
+    let videoFrameRate = 29.97;
     //what is the video frame rate? i.e: 25fps/30fps
     let yOffsetToVidTimeRate = 1000;
     //how long do you want the scroll to be? The bigger the number, the longer the scroll. Defaul as 1000 recommended. 
